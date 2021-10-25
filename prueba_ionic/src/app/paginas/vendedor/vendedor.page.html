@@ -1,0 +1,35 @@
+<ion-header>
+    <ion-buttons>
+        <ion-back-button defaultHref="/" text="Atras"></ion-back-button>
+    </ion-buttons>
+    <ion-toolbar>
+        <ion-title>VENDEDOR
+        </ion-title>
+    </ion-toolbar>
+</ion-header>
+
+<ion-content>
+    <ion-list>
+        <ion-item *ngFor="let item of Vendedores">
+            <ion-card>
+                <img [src]="item.url">
+                <ion-card-header>
+                    <ion-card-title>{{item.name}}</ion-card-title>
+                </ion-card-header>
+                <ion-card-content>
+                    <ion-label>
+                        Code: {{item.code}}
+                    </ion-label>
+                    <ion-label>
+                        Email: {{item.email}}
+                    </ion-label>
+                    <ion-label>
+                        Phone: {{item.phone}}
+                    </ion-label>
+                </ion-card-content>
+            </ion-card>
+        </ion-item>
+    </ion-list>
+
+
+</ion-content>
